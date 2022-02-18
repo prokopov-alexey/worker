@@ -1,0 +1,12 @@
+app:
+  schema: public
+spring:
+  quartz:
+    properties:
+      org:
+        quartz:
+          dataSource:
+            pg:
+              URL: jdbc:postgresql://localhost:5432/demo?currentSchema=${app.schema}
+              user: demo
+              password: 1234

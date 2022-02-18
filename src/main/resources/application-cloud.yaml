@@ -7,6 +7,6 @@ spring:
         quartz:
           dataSource:
             pg:
-              URL: jdbc:postgresql://${DB_POSTGRES_HOST}:${DB_POSTGRES_PORT}/postgres?currentSchema=${app.schema}
+              URL: jdbc:postgresql://${DB_POSTGRES_HOST}:${DB_POSTGRES_PORT}/${DB_NAME}?currentSchema=${app.schema}
               user: ${DB_USER}
               password: ${DB_PASS}
