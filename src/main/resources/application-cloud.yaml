@@ -1,0 +1,12 @@
+app:
+  schema: ${DB_SCHEMA}
+spring:
+  quartz:
+    properties:
+      org:
+        quartz:
+          dataSource:
+            pg:
+              URL: jdbc:postgresql://${DB_POSTGRES_HOST}:${DB_POSTGRES_PORT}/postgres?currentSchema=${app.schema}
+              user: ${DB_USER}
+              password: ${DB_PASS}
